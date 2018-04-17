@@ -43,6 +43,10 @@ const browserConfig = function(root, settings) {
     plugins: [
       new copyWebpackPlugin([
         {
+          from: `${root(settings.paths.src.client.assets.root)}/favicon.ico`,
+          to: '../favicon.ico'
+        },
+        {
           from: `${root(settings.paths.src.client.assets.root)}/config.local.json`,
           to: './config.local.json'
         },
